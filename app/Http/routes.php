@@ -24,3 +24,4 @@ Route::get('/admin',function (){
 });
 
 Route::resource('/admin/user','AdminUserController');
+
