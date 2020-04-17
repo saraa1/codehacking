@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
+use App\Photo;
+
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class AdminUserController extends Controller
 {
@@ -16,11 +19,17 @@ class AdminUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
-        //
-        $user= User::all();
-        return view('admin.users.index',compact(['user']));
+//        //
+        $users= User::all();
+//        $user= Auth::user()->all();
+        return view('admin.users.index',compact(['users']));
     }
 
     /**
@@ -44,8 +53,25 @@ class AdminUserController extends Controller
     public function store(UserRequest $request)
     {
         //
-       $user=User::create($request->all());
-       return redirect('/admin/user');
+//       $user=User::create($request->all());
+//       return redirect('/admin/user');
+
+
+        $input= $request->all();
+        if($file=$request->file('photo_id')){
+            $name= time().$file->getClientOriginalName();
+            $file->move('images',$name);
+           $photo = Photo::create(['file'=>$name]);
+
+          $input['photo_id']=$photo->id;
+
+
+
+
+        }
+
+         User::create($input);
+         return redirect('/admin/user');
     }
 
     /**

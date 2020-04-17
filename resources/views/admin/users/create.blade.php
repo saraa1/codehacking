@@ -4,7 +4,8 @@
     <h1>Create User</h1>
 
 
-    {!! Form::open(['method'=>'POST','action'=>'AdminUserController@store','file'=>true]) !!}
+    {!! Form::open(['method'=>'POST','action'=>'AdminUserController@store','files'=>true]) !!}
+    {{csrf_token()}}
 
     <div class="form-group">
         {!! Form::label('name','Name:') !!}
@@ -27,8 +28,8 @@
         {!! Form::select('is_active',array(1=>'Active',0=>'Not Active'),0,['class'=>'form-control']) !!}
     </div>
     <div class="form-group">
-        {!! Form::label('file','File:') !!}
-        {!! Form::file('file') !!}
+        {!! Form::label('photo_id','File:') !!}
+        {!! Form::file('photo_id') !!}
     </div>
 
     <div class="form-group">

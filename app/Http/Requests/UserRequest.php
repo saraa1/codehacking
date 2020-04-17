@@ -29,7 +29,8 @@ class UserRequest extends Request
             'email'=>'required',
             'password'=>'required',
             'role_id'=>'required',
-            'is_active'=>'required'
+            'is_active'=>'required',
+
         ];
     }
 }
