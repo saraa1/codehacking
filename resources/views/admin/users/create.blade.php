@@ -4,8 +4,9 @@
     <h1>Create User</h1>
 
 
+    <div class="col-sm-9" style="width: 1200px">
     {!! Form::open(['method'=>'POST','action'=>'AdminUserController@store','files'=>true]) !!}
-    {{csrf_token()}}
+
 
     <div class="form-group">
         {!! Form::label('name','Name:') !!}
@@ -36,6 +37,7 @@
         {!! Form::submit('Create User',['class'=>'btn btn-primary']) !!}
     </div>
     {!! Form::close() !!}
+    </div>
 
    @include('includes.form_error')
 

@@ -2,6 +2,18 @@
 
 @section('content')
     <h1>Index</h1>
+
+    <div>
+        @if(Session::has('deleted_user'))
+           <p class="bg-danger"> {{session('deleted_user')}} </p>
+        @endif
+
+            @if(Session::has('updated_user'))
+                <p class="bg-danger"> {{session('updated_user')}} </p>
+            @endif
+
+
+    </div>
      <table class="table table-striped">
          <thead>
            <tr>

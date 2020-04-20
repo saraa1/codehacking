@@ -68,10 +68,10 @@
                     <a href="#postSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench fa-fw"></i> Posts<span class="fa arrow"></span></a>
                     <ul class="collapse list-unstyled" id="postSubmenu">
                         <li>
-                            <a href="/posts">All Posts</a>
+                            <a href="{{route('admin.post.index')}}">All Posts</a>
                         </li>
                         <li>
-                            <a href="/posts/create">Create Posts</a>
+                            <a href="{{route('admin.post.create')}}">Create Posts</a>
                         </li>
 
                     </ul>
