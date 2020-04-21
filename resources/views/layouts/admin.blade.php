@@ -81,10 +81,10 @@
                     <a href="#categoriesSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench fa-fw"></i> Categories<span class="fa arrow"></span></a>
                     <ul class="collapse list-unstyled" id="categoriesSubmenu">
                         <li>
-                            <a href="/categories">All Categories</a>
+                            <a href="{{route('admin.categories.index')}}">All Categories</a>
                         </li>
                         <li>
-                            <a href="/categories/create">Create Category</a>
+                            <a href="{{route('admin.categories.index')}}">Create Category</a>
                         </li>
 
                     </ul>
