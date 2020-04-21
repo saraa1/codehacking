@@ -3,14 +3,14 @@
 @section('content')
     <h1>Edit User</h1>
     <div class="col-sm-3">
-        <img height=50 src="{{asset($user->photo ? $user->photo->file: 'https://placehold.it/400x400')}}"  class="img-responsive img-rounded">
+        <img height=100 src="{{asset($user->photo ? $user->photo->file: 'https://placehold.it/400x400')}}"  class="img-responsive img-rounded">
         
     </div>
     
 
     <div class="col-sm-9" style="width: 1200px">
 
-    {!! Form::model($user,['method'=>'PATCH','action'=>['AdminUserController@update',$user->id],'files'=>true]) !!}
+    {!! Form::model($user,['method'=>'PUT','action'=>['AdminUserController@update',$user->id],'files'=>true]) !!}
 
 
     <div class="form-group">
