@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    @yield('styles')
 </head>
 <body>
 
@@ -94,10 +95,10 @@
                     <a href="#mediaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench fa-fw"></i> Media<span class="fa arrow"></span></a>
                     <ul class="collapse list-unstyled" id="mediaSubmenu">
                         <li>
-                            <a href="/media">All Media</a>
+                            <a href="{{route('admin.media.index')}}">All Media</a>
                         </li>
                         <li>
-                            <a href="">Upload Media</a>
+                            <a href="{{route('admin.media.create')}}">Upload Media</a>
                         </li>
 
                     </ul>
@@ -248,5 +249,7 @@
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 <script src="{{asset('js/main.js')}}"></script>
+
+@yield('scripts')
 </body>
 </html>
