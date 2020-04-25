@@ -76,7 +76,10 @@ class AdminPostController extends Controller
      */
     public function show($id)
     {
-        //
+//        //
+//        return view('admin.comments.show');
+
+
     }
 
     /**
@@ -135,6 +138,16 @@ class AdminPostController extends Controller
         unlink(public_path().$post->photo->file);
         $post->delete();
         return redirect('/admin/post');
+
+    }
+
+    public function post($id){
+
+        $post = Post::findOrFail($id);
+        $comment=$post->comment()->whereIsActive(1)->get();
+
+
+        return view('post',compact('post','comment'));
 
     }
 }

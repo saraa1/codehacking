@@ -16,22 +16,14 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     @yield('styles')
 </head>
 <body>
-
-
 <div class="wrapper d-flex align-items-stretch">
-
-
-
-
     <nav id="sidebar" class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-
-
-
-
         <!-- /.navbar-header -->
         <div class="p-4 pt-5">
 
@@ -42,7 +34,6 @@
                         <span class="input-group-btn">
                                     <button class="btn btn-default" type="button">
                                         <i class="fa fa-search"></i>
-
                                     </button>
                         </span>
                     </div>
@@ -73,6 +64,9 @@
                         </li>
                         <li>
                             <a href="{{route('admin.post.create')}}">Create Posts</a>
+                        </li>
+                        <li>
+                            <a href="{{route('admin.comments.index')}}">All Comments</a>
                         </li>
 
                     </ul>
@@ -227,9 +221,7 @@
 
 
                          </div>
-                    <h1 class="page-header"></h1>
-
-
+{{--                    <h1 class="page-header"></h1>--}}
                     @yield('content')
                 </div>
                 <!-- /.col-lg-12 -->

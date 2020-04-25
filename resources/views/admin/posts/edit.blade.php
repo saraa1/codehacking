@@ -41,7 +41,7 @@
 
 
         <div class="form-group">
-            {!! Form::submit('Delete Post',['class'=>'btn btn-danger col-sm-3']) !!}
+            {!! Form::submit('Delete Post',['class'=>'btn btn-danger col-sm-3 ']) !!}
         </div>
         {!! Form::close() !!}
     </div>

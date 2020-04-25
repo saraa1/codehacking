@@ -9,7 +9,7 @@
         @endif
 
             @if(Session::has('updated_user'))
-                <p class="bg-danger"> {{session('updated_user')}} </p>
+                <p class="bg-primary"> {{session('updated_user')}} </p>
             @endif
 
 
