@@ -209,19 +209,39 @@
             <div class="row">
                 <div class="col-lg-12">
 
-                        <div class="container-fluid" style="padding-top: 30px">
+                    <div class="container-fluid" style="padding-top: 30px">
 
-                            <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                                <i class="fa fa-bars"></i>
-                                <span class="sr-only">Toggle Menu</span>
-                            </button>
-                            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <i class="fa fa-bars"></i>
-                            </button>
+                        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                            <i class="fa fa-bars"></i>
+                            <span class="sr-only">Toggle Menu</span>
+                        </button>
+                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars"></i>
+                        </button>
+{{--                        <div class="collapse navbar-collapse" id="navbarSupportedContent">--}}
+{{--                            <ul class="nav navbar-nav navbar-right  ">--}}
+{{--                                <li class="nav-item active">--}}
+{{--                                    <a class="nav-link" href="#">Home</a>--}}
+{{--                                </li>--}}
+
+{{--                                @if(Auth::check())--}}
+{{--                                    <li class="dropdown nav-item">--}}
+{{--                                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false">--}}
+{{--                                            {{ Auth::user()->name }} <span class="caret"></span>--}}
+{{--                                        </a>--}}
+
+{{--                                        <ul class="dropdown-menu" role="menu">--}}
+{{--                                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out" style="padding-left: 1rem"></i>Logout</a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </li>--}}
+{{--                                @endif--}}
+
+{{--                            </ul>--}}
+{{--                        </div>--}}
 
 
-                         </div>
-{{--                    <h1 class="page-header"></h1>--}}
+                    </div>
+                    {{--                    <h1 class="page-header"></h1>--}}
                     @yield('content')
                 </div>
                 <!-- /.col-lg-12 -->
@@ -243,5 +263,4 @@
 <script src="{{asset('js/main.js')}}"></script>
 
 @yield('scripts')
-</body>
 </html>

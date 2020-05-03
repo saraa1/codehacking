@@ -33,11 +33,20 @@
                     <td>{{str_limit($post->body,7)}}</td>
                     <td>{{$post->created_at->diffForHumans()}}</td>
                     <td>{{$post->updated_at->diffForHumans()}}</td>
-                    <td><a href="{{route('home.post',$post->id)}}"> View Post</a></td>
+                    <td><a href="{{route('home.post',$post->slug)}}"> View Post</a></td>
                     <td><a href="{{route('admin.comments.show',$post->id)}}"> View Comments</a></td>
                 </tr>
             @endforeach
         @endif
         </tbody>
     </table>
+
+    <div class="row">
+<center>
+        <div class="col-6 col-md-offset-5 ml-9 mt-4">
+           {!! $posts->render() !!}
+
+        </div>
+</center>
+
 @stop

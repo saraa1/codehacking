@@ -31,7 +31,7 @@
                    <td>{{$comment->email}}</td>
                    <td>{{$comment->body}}</td>
                    <td><img height="64" src="{{asset($comment->photo ? $comment->photo : "https://placeholder.it/64x64")}}"></td>
-                   <td><a href="{{route('home.post',$comment->post_id)}}"> View Post</a></td>
+                   <td><a href="{{route('home.post',$comment->slug)}}"> View Post</a></td>
                    <td><a href="{{route('admin.comment.replies.show',$comment->id)}}"> View Replies</a></td>
                    <td>
                        @if($comment->is_active==1)
