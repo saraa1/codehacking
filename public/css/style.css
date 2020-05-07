@@ -8224,6 +8224,7 @@ h1, h2, h3, h4, h5,
   border: none;
   border-radius: 0;
   margin-bottom: 40px;
+  margin-top: 0px;
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); }
 
@@ -8245,7 +8246,7 @@ h1, h2, h3, h4, h5,
 #sidebar {
   min-width: 300px;
   max-width: 300px;
-  background: #1d1919;
+  background: darkslategrey;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;

@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Validator;
 use App\Http\Requests;
 use App\Category;
+use phpDocumentor\Reflection\Types\This;
 
 class AdminCategoriesController extends Controller
 {
@@ -44,7 +45,12 @@ class AdminCategoriesController extends Controller
     public function store(Request $request)
     {
         //
-        Category::create($request->all());
+        $data=$this->validate($request,[
+            'name'=>'required'
+        ]);
+        $data=$request->all();
+
+        Category::create(['name'=>$data['name']]);
         return redirect ('/admin/categories');
     }
 

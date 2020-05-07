@@ -40,7 +40,7 @@
                     <!-- /input-group -->
                 </li>
                 <li>
-                    <a href="/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    <a href="/codehacking/public/admin"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                 </li>
 
                 <li class="active">
@@ -263,4 +263,5 @@
 <script src="{{asset('js/main.js')}}"></script>
 
 @yield('scripts')
+</body>
 </html>

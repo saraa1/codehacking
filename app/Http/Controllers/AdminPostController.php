@@ -39,7 +39,7 @@ class AdminPostController extends Controller
     public function create()
     {
         //
-        $category = Category::lists('name','id')->all();
+        $category = Category::pluck('name','id')->all();
         return view('admin.posts.create',compact('category'));
     }
 
@@ -93,7 +93,7 @@ class AdminPostController extends Controller
         //
 
         $post = Post::findOrFail($id);
-        $category = Category::lists('name','id');
+        $category = Category::pluck('name','id');
         
 
         return view('admin.posts.edit',compact('post','category'));
@@ -136,7 +136,7 @@ class AdminPostController extends Controller
     {
         //
         $post= Post::findOrFail($id);
-        unlink(public_path().$post->photo->file);
+        unlink(public_path().$post->photo->file ? public_path().$post->photo->file : '');
         $post->delete();
         return redirect('/admin/post');
 

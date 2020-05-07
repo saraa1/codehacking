@@ -1,12 +1,15 @@
 @extends('layouts/admin')
 
 @section('content')
+    @include('includes.tinyeditor')
     <h1>Create Post</h1>
 
 
     <div class="col-sm-9" style="width: 1200px">
+
         {!! Form::open(['method'=>'POST','action'=>'AdminPostController@store','files'=>true]) !!}
 
+        {{ csrf_field() }}
 
         <div class="form-group">
             {!! Form::label('title','Title:') !!}
@@ -35,6 +38,7 @@
     <div class="row">
         @include('includes.form_error')
     </div>
+
 
 
 

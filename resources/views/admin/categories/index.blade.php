@@ -17,6 +17,11 @@
         {!! Form::close() !!}
 
 </div>
+@if ($errors->has('name'))
+    <span class="help-block text-danger">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+@endif
 
 <div class="">
 <table class="table table-striped">
